@@ -3,11 +3,13 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
 
   def new
+    # q=検索ワード
     if params[:q]
       response = RakutenWebService::Ichiba::Item.search(
         keyword: params[:q],
         imageFlag: 1,
       )
+      # APIから取得したデータを変数に格納
       @items = response.first(20)
     end
   end
