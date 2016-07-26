@@ -15,6 +15,11 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @want_users = @item.want_users
+    @have_users = @item.have_users
+    item =  RakutenWebService::Ichiba::Item.search(itemCode: @item.item_code)
+    @product = item.first(1)
   end
 
   private
