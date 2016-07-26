@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
     @want_users = @item.want_users
     @have_users = @item.have_users
     item =  RakutenWebService::Ichiba::Item.search(itemCode: @item.item_code)
-    @product = item.first(1)
+    @product = item.first
   end
 
   private
