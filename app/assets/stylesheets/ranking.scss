@@ -1,0 +1,65 @@
+.rank-box {
+    display: table;
+    width: 100%;
+    border-top: solid 1px #dfdfdf;
+    background-color: #fff;
+    &.rank-1 {
+        background-color: #fef6df;
+        .col-1 {
+            font-size: 40px;
+            color: #a98c3c;
+        }
+    }
+    &.rank-2 {
+        background-color: #f6f6f6;
+        .col-1 {
+            font-size: 40px;
+            color: #a98c3c;
+        }
+    }
+    &.rank-3 {
+        background-color: #fff5ee;
+        .col-1 {
+            font-size: 40px;
+            color: #a98c3c;
+        }
+    }
+    .col-1 {
+        display: table-cell;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+        color: #000;
+        vertical-align: middle;
+    }
+    .col-2 {
+        display: table-cell;
+        width: 200px;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .col-3 {
+        display: table-cell;
+        vertical-align: top;
+        padding: 10px;
+        a {
+            color: #333;
+        }
+    }
+    .p-title {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.theme-title{
+    font-size: 40px;
+    color: #bf0000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-inner inner-default">
+        <h2 class="theme-title">みんなの持ってるものランキング</h2>
+        <% @haves.each.with_index(1) do |key, num| %>
+        <% item = Item.find(key) %>
+        <div class="rank-box rank-<%= num %>">
+            <p class="col-1"><%= num %>位</p>
+            <div class="col-2">
+                <p class="p-image"><%= image_tag(item["large_image"].gsub('?_ex=128x128', '') , alt: item['title']) %></p>
+            </div>
+            <div class="col-3">
+                <%= link_to "#{item["detail_page_url"]}" do %>
+                <p class="p-title"><%= item["title"] %></p>
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
